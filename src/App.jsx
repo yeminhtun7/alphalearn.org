@@ -1,21 +1,27 @@
 import './App.css';
-import { AppContainer, Heading, Link } from './App.styles';
-
-
+import image from './images/bg.jpg';
+import { SubContainer, Container, Heading, Link, Text } from './App.styles';
 
 function App() {
   return (
-    <AppContainer>
-      <Heading>Coming Soon ...</Heading>
-      <p>
-        Meanwhile check on &nbsp;
-        <Link
-          href={`https://facebook.com/alphalearn.co`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >Facebook</Link>
-      </p>
-    </AppContainer>
+    <Container image={image} >
+      <SubContainer>
+        <small>
+          <Text>
+            We are working hard to bring you the best experience on the web.
+          </Text>
+        </small>
+        <Heading>Coming Soon ...</Heading>
+        <Text>
+          Meanwhile you may check on &nbsp;
+          <Link
+            href={`https://facebook.com/alphalearn.co`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >Facebook</Link> ...
+        </Text>
+      </SubContainer>
+    </Container>
   );
 }
 
