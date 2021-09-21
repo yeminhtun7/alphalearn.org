@@ -1,7 +1,17 @@
 import styled from "styled-components";
 
-export const AppContainer = styled.div`
+export const Container = styled.div`
     background-color: #fafafa;
+    background-image: url(${props => props.image});
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+`;
+
+export const SubContainer = styled.div`
     color: #000;
     display: flex;
     flex-direction: column;
@@ -19,7 +29,7 @@ export const Heading = styled.h1`
     }
     font: "Open Sans", sans-serif;
     text-shadow: 0 0 1em #000;
-    transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+    color: azure;
 `;
 
 export const Link = styled.a`
@@ -31,4 +41,12 @@ export const Link = styled.a`
     &:hover {
         text-decoration: underline;
     }
+`;
+
+export const Text = styled.p`
+    color: #555;
+    font-size: 1.2em;
+    font: "Open Sans", sans-serif;
+    text-shadow: 0 0 2em cyan;
+    text-align: center;
 `;
