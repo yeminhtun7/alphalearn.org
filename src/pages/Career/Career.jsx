@@ -1,6 +1,7 @@
 import React from "react";
 import { CareerComponent } from "../../components/CareerComponent/CareerComponent";
-import { CareerDiv } from "./Career.styles";
+import { CareerDiv, HeaderDiv, HeaderText } from "./Career.styles";
+import img from "./books.webp";
 
 export const Career = () => {
   const dummyData = [
@@ -41,10 +42,22 @@ export const Career = () => {
     },
   ];
   return (
-    <CareerDiv>
-      {dummyData.map((data) => (
-        <CareerComponent key={data.id} data={data} />
-      ))}
-    </CareerDiv>
+    <>
+      <HeaderDiv>
+        <img src={img} />
+        <HeaderText>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas esse
+            sapiente nam minima fuga consectetur, sint est assumenda iste
+            aspernatur culpa enim nulla? Praesentium.
+          </p>
+        </HeaderText>
+      </HeaderDiv>
+      <CareerDiv>
+        {dummyData.map((data) => (
+          <CareerComponent key={data.id} data={data} />
+        ))}
+      </CareerDiv>
+    </>
   );
 };
