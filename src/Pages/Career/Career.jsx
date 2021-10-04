@@ -1,9 +1,9 @@
-import React from "react";
-import { CareerComponent } from "../../components/CareerComponent/CareerComponent";
+import React from "react"
+import { CareerComponent } from "Components/CareerComponent/CareerComponent";
 import { CareerDiv, HeaderDiv, HeaderText } from "./Career.styles";
 import img from "./books.webp";
 
-export const Career = () => {
+const Career = () => {
   const dummyData = [
     {
       id: 1,
@@ -44,7 +44,7 @@ export const Career = () => {
   return (
     <>
       <HeaderDiv>
-        <img src={img} />
+        <img src={img} alt={""} />
         <HeaderText>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas esse
@@ -61,3 +61,5 @@ export const Career = () => {
     </>
   );
 };
+
+export default Career;
